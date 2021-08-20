@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "490117990327",
+    "project_id": "trailmixers-526e5",
+    "storage_bucket": "trailmixers-526e5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:490117990327:android:26791c70896b7dd2c58a32",
+        "android_client_info": {
+          "package_name": "com.ryanjoshuachildress.trailmixers"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "490117990327-4r6iil7prpojf7st2vujf2h22as4p2m2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfiyaf5myR-jGGqSAEg9O7bT9k_LamW2w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "490117990327-4r6iil7prpojf7st2vujf2h22as4p2m2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
