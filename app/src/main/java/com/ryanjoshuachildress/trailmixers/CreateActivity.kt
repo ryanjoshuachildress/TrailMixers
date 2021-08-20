@@ -194,6 +194,8 @@ class CreateActivity : AppCompatActivity() {
                     Toast.makeText(this, "Failed Game Creation", Toast.LENGTH_SHORT).show()
                     return@addOnCompleteListener
                 }
+                //Log statement for successfully creating game
+
                 Log.i(TAG, "Successfully created $gameName")
                 AlertDialog.Builder(this)
                     .setTitle("Upload complete! Let's play your game '$gameName")
