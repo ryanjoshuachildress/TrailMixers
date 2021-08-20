@@ -80,15 +80,15 @@ class CreateActivity : AppCompatActivity() {
 
         etGameName.addTextChangedListener(object: TextWatcher{
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                shouldEnableSaveButton()
+
             }
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                shouldEnableSaveButton()
+
             }
 
             override fun afterTextChanged(p0: Editable?) {
-                shouldEnableSaveButton()
+                btnSave.isEnabled = shouldEnableSaveButton()
             }
 
         })
@@ -142,6 +142,7 @@ class CreateActivity : AppCompatActivity() {
         for ((index: Int, photoUri: Uri) in chosenImageUris.withIndex()) {
             val imageByteArray = getImageByteArray(photoUri)
             val filePath = "Images/$gameName/${System.currentTimeMillis()}-${index}.jpg"
+            val filePathFull = "Images/$gameName/full/${System.currentTimeMillis()}-${index}.jpg"
             val photoReference: StorageReference = storage.reference.child(filePath)
             photoReference.putBytes(imageByteArray)
                 .continueWithTask { photoUploadTask ->
@@ -277,12 +278,9 @@ class CreateActivity : AppCompatActivity() {
 
     private fun shouldEnableSaveButton(): Boolean {
 
-        if(chosenImageUris.size != numImagesRequired){
+        if(chosenImageUris.size != numImagesRequired || etGameName.text.length <= MIN_GAME_NAME_LENGTH){
             return false
         }
-      //  if(etGameName.text.isBlank() || etGameName.text.length < MIN_GAME_NAME_LENGTH) {
-       //     return false
-       // }
         return true
     }
 
