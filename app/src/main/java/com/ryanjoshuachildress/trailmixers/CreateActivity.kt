@@ -73,7 +73,6 @@ class CreateActivity : AppCompatActivity() {
 
         btnSave.setOnClickListener{
             saveDataToFirebase()
-
         }
 
         etGameName.filters = arrayOf(InputFilter.LengthFilter(MAX_GAME_NAME_LENGTH))
