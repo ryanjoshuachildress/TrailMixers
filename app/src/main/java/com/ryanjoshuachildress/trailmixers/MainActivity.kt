@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         private const val TAG = "MainActivity"
 
     }
-    
+
     private lateinit var btnMemoryGame: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {

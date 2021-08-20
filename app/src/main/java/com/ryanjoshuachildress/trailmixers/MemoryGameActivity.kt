@@ -62,7 +62,7 @@ class MemoryGameActivity : AppCompatActivity() {
         // Check if user is signed in (non-null) and update UI accordingly.
         val currentUser = mAuth?.currentUser
         if(currentUser != null){
-            setupBoard();
+            setupBoard()
         }
     }
 
