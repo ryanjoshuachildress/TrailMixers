@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private lateinit var btnMemoryGame: Button
+    private lateinit var btnLaunchAuth: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,6 +26,17 @@ class MainActivity : AppCompatActivity() {
             launchMemoryGame()
         }
 
+        btnLaunchAuth = findViewById(R.id.btnLaunchAuth)
+
+        btnLaunchAuth.setOnClickListener{
+            launchAuth()
+        }
+
+    }
+
+    private fun launchAuth() {
+        val intent = Intent(this, LoginActivity::class.java)
+        startActivity(intent)
     }
 
     private fun launchMemoryGame() {
