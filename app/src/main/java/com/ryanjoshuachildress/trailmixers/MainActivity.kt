@@ -16,6 +16,12 @@ class MainActivity : AppCompatActivity() {
     private lateinit var btnMemoryGame: Button
     private lateinit var btnLaunchAuth: Button
 
+    private val signInLauncher = registerForActivityResult(
+        FirebaseAuthUIActivityResultContract()
+    ) { res ->
+        this.onSignInResult(res)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
